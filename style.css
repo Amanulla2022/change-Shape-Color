@@ -1,0 +1,61 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#shape-container {
+  height: 10rem;
+  width: 10rem;
+  background-color: rgb(16, 194, 206);
+  position: relative;
+}
+
+.inner-shape,
+.triangle,
+.hexagon,
+.parallel,
+.circle {
+  position: absolute;
+  background-color: #fff;
+  width: 5rem;
+  height: 5rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.parallel {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.circle {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.color,
+.shape {
+  margin-top: 2.5rem;
+}
+
+button {
+  background-color: aquamarine;
+  border-radius: 1rem;
+  border: none;
+}
